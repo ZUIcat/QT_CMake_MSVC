@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "${command:cmake.tasksBuildCommand}",
+            "problemMatcher": [ // 使得编译过后，输出的错误显示到下方的“问题”窗口内。
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
