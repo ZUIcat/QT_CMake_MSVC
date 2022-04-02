@@ -1,2 +1,5 @@
-/bin/main.exe
-/build/
+/.vs/*
+!/.vs/launch.vs.json
+
+/out/
+/bin/

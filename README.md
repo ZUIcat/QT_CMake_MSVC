@@ -1,1 +1,1 @@
-# QT_CPP
+# QT_CMake_MSVC
