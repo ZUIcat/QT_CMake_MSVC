@@ -1,12 +1,15 @@
 {
-  "version": "0.2.1",
-  "defaults": {},
-  "configurations": [
-    {
-      "type": "default",
-      "project": "CMakeLists.txt",
-      "projectTarget": "",
-      "name": "CMakeLists.txt"
-    }
-  ]
+    "version": "0.2.1",
+    "defaults": {},
+    "configurations": [
+        {
+            "type": "default",
+            "project": "CMakeLists.txt",
+            "projectTarget": "",
+            "name": "CMakeLists.txt",
+            "env": {
+                "PATH": "${env.PATH};${env.QT_HOME}/5.12.12/msvc2017_64/bin"
+            }
+        }
+    ]
 }

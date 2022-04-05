@@ -7,13 +7,17 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 
+#include "ui/ui_untitled.h"
+
 int main(int argc, char *argv[]) {
     std::cout << "--Start--" << std::endl;
+
     QApplication a(argc, argv);
     QLabel label(QLabel::tr("Hello Qt!"));
     label.show();
 
     int retCode = a.exec();
+
     std::cout << "--End--" << std::endl;
     return retCode;
 }

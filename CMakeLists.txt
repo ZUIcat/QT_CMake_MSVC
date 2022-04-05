@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.10)
 
 project("Qt_CMake_Test" VERSION 0.1.0)
 
@@ -12,13 +12,11 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(ENV{PATH} "D:/_MyDownload/Qt/Qt5.12.12/5.12.12/msvc2017_64/bin")
-
-set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};D:/_MyDownload/Qt/Qt5.12.12/5.12.12/msvc2017_64")
-# set(Qt5_DIR "D:/_MyDownload/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5") # 也能用，官方更推荐上一种
+set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};$ENV{QT_HOME}/5.12.12/msvc2017_64") 
+# set(Qt5_DIR "$ENV{QT_HOME}/5.12.12/msvc2017_64/lib/cmake/Qt5") # 也能用，官方更推荐上一种
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_compile_options("/utf-8")
+add_compile_options("/utf-8") 
 
 add_executable(main
     "src/TheMain.h"
