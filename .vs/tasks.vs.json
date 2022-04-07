@@ -1,0 +1,20 @@
+{
+    "version": "0.2.1",
+    "tasks": [
+        {
+            "taskLabel": "\"编译该 UI\"",
+            "appliesTo": "*.ui",
+            "type": "default",
+            "env": {
+                "PATH": "${env.PATH};${env.QT_HOME}\\5.12.12\\msvc2017_64\\bin"
+            },
+            "command": "python",
+            "args": [
+                "\"${workspaceRoot}\\tools\\compile_ui.py\"",
+                "\"${file}\"",
+                "\"${workspaceRoot}\\src\"",
+                "\"${cmake.buildRoot}\\${env.SELF_APP_NAME}_autogen\\include\""
+            ]
+        }
+    ]
+}

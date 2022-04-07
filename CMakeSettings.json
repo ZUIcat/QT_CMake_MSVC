@@ -1,15 +1,28 @@
 {
-  "configurations": [
-    {
-      "name": "x64-Debug",
-      "generator": "Ninja",
-      "configurationType": "Debug",
-      "inheritEnvironments": [ "msvc_x64_x64" ],
-      "buildRoot": "${projectDir}\\out\\build\\${name}",
-      "installRoot": "${projectDir}\\out\\install\\${name}",
-      "cmakeCommandArgs": "",
-      "buildCommandArgs": "",
-      "ctestCommandArgs": ""
-    }
-  ]
+    "configurations": [
+        {
+            "name": "x64-Debug",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "environments": [
+                {
+                    "SELF_APP_NAME": "Main",
+                    "QT_HOME_MSVC": "${env.QT_HOME}\\5.12.12\\msvc2017_64",
+                    "QT_HOME_MSVC_BIN": "${env.QT_HOME}\\5.12.12\\msvc2017_64\\bin"
+                }
+            ],
+            "variables": [
+                {
+                    "name": "CMAKE_PREFIX_PATH",
+                    "value": "${env.QT_HOME_MSVC}"
+                }
+            ]
+        }
+    ]
 }
